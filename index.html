@@ -14,9 +14,9 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
@@ -24,130 +24,248 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
         
         header {
             text-align: center;
             color: white;
-            padding: 60px 0;
+            padding: 100px 0 80px;
+            position: relative;
         }
         
-        .logo {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 20px;
-            background: white;
-            border-radius: 20px;
+        .hero-icon {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 40px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            font-size: 60px;
+            backdrop-filter: blur(15px);
+            border: 3px solid rgba(255, 255, 255, 0.2);
         }
         
         h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
+            font-size: 4rem;
             font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
         }
         
         .subtitle {
-            font-size: 1.3em;
+            font-size: 1.6rem;
             opacity: 0.9;
-            margin-bottom: 40px;
+            font-weight: 300;
+            margin-bottom: 50px;
         }
         
         .main-content {
             background: white;
-            border-radius: 20px;
-            padding: 60px;
-            margin: 40px 0;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            border-radius: 32px;
+            padding: 80px 60px;
+            margin: -60px 0 80px;
+            box-shadow: 0 30px 100px rgba(0, 0, 0, 0.15);
+            position: relative;
+            z-index: 1;
         }
         
         .description {
-            font-size: 1.2em;
+            font-size: 1.4rem;
             text-align: center;
-            margin-bottom: 50px;
-            color: #666;
+            margin-bottom: 60px;
+            color: #475569;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 50px 0;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin: 80px 0;
         }
         
         .feature {
             text-align: center;
-            padding: 30px;
-            border-radius: 15px;
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
+            padding: 50px 30px;
+            border-radius: 20px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, #667eea, #764ba2);
+        }
+        
+        .feature:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
         
         .feature h3 {
-            margin-bottom: 15px;
-            color: #495057;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-weight: 600;
         }
         
         .feature p {
-            color: #6c757d;
+            color: #64748b;
+            font-size: 1.1rem;
+            line-height: 1.7;
         }
         
         .links {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 50px 0;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 80px 0;
         }
         
         .link-card {
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 10px;
-            padding: 25px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 40px 30px;
             text-align: center;
             text-decoration: none;
-            color: #495057;
-            transition: all 0.3s ease;
+            color: inherit;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
+        
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #10b981, #06d6a0);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .link-card:hover::before {
+            transform: scaleX(1);
         }
         
         .link-card:hover {
-            background: #e9ecef;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
         }
         
         .link-card h3 {
-            margin-bottom: 10px;
-            color: #495057;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .link-card p {
+            color: #64748b;
+            line-height: 1.6;
         }
         
         footer {
             text-align: center;
             color: white;
-            padding: 40px 0;
-            opacity: 0.8;
+            padding: 60px 0;
+            opacity: 0.9;
+        }
+        
+        footer p {
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+        
+        .app-badges {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 30px;
+            border-radius: 12px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .badge:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
         }
         
         @media (max-width: 768px) {
             .container {
-                padding: 10px;
+                padding: 0 15px;
             }
             
-            .main-content {
-                padding: 30px 20px;
+            header {
+                padding: 80px 0 60px;
+            }
+            
+            .hero-icon {
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
             }
             
             h1 {
-                font-size: 2em;
+                font-size: 2.8rem;
+                letter-spacing: -1px;
             }
             
             .subtitle {
-                font-size: 1.1em;
+                font-size: 1.3rem;
+            }
+            
+            .main-content {
+                padding: 50px 30px;
+                margin: -40px 0 60px;
+            }
+            
+            .description {
+                font-size: 1.2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin: 60px 0;
+            }
+            
+            .feature {
+                padding: 40px 25px;
+            }
+            
+            .links {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
         }
     </style>
@@ -155,9 +273,14 @@
 <body>
     <div class="container">
         <header>
-            <div class="logo">🙏</div>
+            <div class="hero-icon">🙏</div>
             <h1>God Said</h1>
             <p class="subtitle">AI-Powered Prayer & Scripture Guidance</p>
+            
+            <div class="app-badges">
+                <a href="#" class="badge">📱 Download for iOS</a>
+                <a href="#" class="badge">🤖 Download for Android</a>
+            </div>
         </header>
         
         <main class="main-content">
@@ -168,46 +291,46 @@
             <div class="features">
                 <div class="feature">
                     <h3>🙏 Intelligent Prayer Responses</h3>
-                    <p>AI-powered biblical guidance for your prayers</p>
+                    <p>AI-powered biblical guidance for your prayers with relevant scripture verses and personalized wisdom.</p>
                 </div>
                 <div class="feature">
                     <h3>📱 Modern Design</h3>
-                    <p>Clean and elegant user interface</p>
+                    <p>Clean and elegant user interface designed for seamless spiritual experiences across all devices.</p>
                 </div>
                 <div class="feature">
                     <h3>🔒 Privacy Protected</h3>
-                    <p>Your prayers are kept completely private</p>
+                    <p>Your prayers are kept completely private with enterprise-grade security and encryption.</p>
                 </div>
                 <div class="feature">
                     <h3>💝 Free to Use</h3>
-                    <p>Basic features free, premium subscriptions available</p>
+                    <p>Essential features available free, with premium subscriptions for enhanced functionality.</p>
                 </div>
             </div>
             
             <div class="links">
                 <a href="privacy.html" class="link-card">
                     <h3>Privacy Policy</h3>
-                    <p>Learn how we protect your data</p>
+                    <p>Learn how we protect your data and maintain the sanctity of your prayers</p>
                 </a>
                 <a href="terms.html" class="link-card">
                     <h3>Terms of Service</h3>
-                    <p>Usage terms and service agreement</p>
+                    <p>Usage terms and service agreement for our prayer guidance platform</p>
                 </a>
                 <a href="support.html" class="link-card">
                     <h3>Help & Support</h3>
-                    <p>FAQ and technical support</p>
+                    <p>FAQ, troubleshooting guides, and technical support for your spiritual journey</p>
                 </a>
                 <a href="about.html" class="link-card">
                     <h3>About Us</h3>
-                    <p>Our mission and team</p>
+                    <p>Our mission, team, and commitment to spreading God's word through technology</p>
                 </a>
                 <a href="data-deletion.html" class="link-card">
                     <h3>Data Deletion</h3>
-                    <p>Account and data deletion requests</p>
+                    <p>Exercise your data rights and request complete account deletion</p>
                 </a>
                 <a href="contact.html" class="link-card">
                     <h3>Contact Us</h3>
-                    <p>Feedback and business inquiries</p>
+                    <p>Feedback, support requests, and business partnership inquiries</p>
                 </a>
             </div>
         </main>
