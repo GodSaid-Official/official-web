@@ -1,0 +1,76 @@
+title: God Said - AI Prayer & Scripture App
+description: Get biblical wisdom and guidance for your prayers through AI technology
+url: "https://yourusername.github.io"
+baseurl: "/godsaid"
+
+# Site settings
+lang: en
+locale: en_US
+
+# SEO settings
+author: God Said Team
+twitter:
+  username: godsaidapp
+  card: summary_large_image
+
+logo: /assets/images/icon.png
+
+social:
+  name: God Said App
+  links:
+    - https://godsaid.app
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude files from build
+exclude:
+  - .gitignore
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Include additional files
+include:
+  - _pages
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Site navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Privacy Policy
+    url: /privacy.html
+  - title: Terms of Service
+    url: /terms.html
+  - title: Help & Support
+    url: /support.html
+  - title: About Us
+    url: /about.html
+  - title: Contact Us
+    url: /contact.html 

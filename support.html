@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - God Said App</title>
+    <meta name="description" content="Get help and support for God Said App. FAQ, troubleshooting guides, and customer service information.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: #495057;
+            margin: 40px 0 20px 0;
+            font-size: 1.5em;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #6c757d;
+            margin: 30px 0 15px 0;
+            font-size: 1.2em;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #495057;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+            color: #495057;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .faq-item {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background: #e9ecef;
+            padding: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: #dee2e6;
+        }
+        
+        .faq-answer {
+            padding: 20px;
+            display: none;
+        }
+        
+        .faq-answer.active {
+            display: block;
+        }
+        
+        .highlight {
+            background: #d4edda;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+            margin: 20px 0;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        
+        .back-link:hover {
+            background: #0056b3;
+        }
+        
+        .contact-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .steps {
+            counter-reset: step-counter;
+        }
+        
+        .step {
+            counter-increment: step-counter;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        
+        .step::before {
+            content: "步骤 " counter(step-counter) ": ";
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header, .content {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Help & Support</h1>
+            <p style="font-size: 1.1em; color: #6c757d;">FAQ • User Guide • Technical Support</p>
+        </header>
+        
+        <div class="content">
+            <div class="highlight">
+                <strong>需要帮助？</strong>这里有详细的使用指南和常见问题解答。如果找不到您需要的信息，请随时联系我们的客服团队。
+            </div>
+            
+            <h2>快速开始</h2>
+            
+            <h3>如何开始使用上帝说话？</h3>
+            <div class="steps">
+                <div class="step">下载并安装应用</div>
+                <div class="step">创建账户或使用Google登录</div>
+                <div class="step">在祷告页面输入您的祷告</div>
+                <div class="step">选择相关主题标签（可选）</div>
+                <div class="step">点击"寻求指引"获得回应</div>
+                <div class="step">阅读生成的圣经经文和指导</div>
+            </div>
+            
+            <h2>常见问题</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    🙏 祷告内容会被保存吗？
+                </div>
+                <div class="faq-answer">
+                    <p>是的，您的祷告会被安全地保存在您的账户中，方便您随时查看历史记录。您可以：</p>
+                    <ul>
+                        <li>在"历史"页面查看所有祷告记录</li>
+                        <li>随时删除不需要的祷告</li>
+                        <li>导出您的祷告记录</li>
+                        <li>通过设置页面删除所有数据</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    🤖 AI回应是如何生成的？
+                </div>
+                <div class="faq-answer">
+                    <p>我们使用先进的AI技术分析您的祷告内容，然后从圣经中选择相关的经文和智慧指导：</p>
+                    <ul>
+                        <li>基于圣经公有领域版本（避免版权问题）</li>
+                        <li>提供适合的经文引用和解释</li>
+                        <li>包含80-120字的智慧指导</li>
+                        <li>在紧急情况下提供专业资源链接</li>
+                    </ul>
+                    <p><strong>注意：</strong>AI回应仅供参考，不能替代专业的牧师咨询或心理健康服务。</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    💰 免费版和付费版有什么区别？
+                </div>
+                <div class="faq-answer">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr style="background: #f8f9fa;">
+                            <th style="padding: 10px; border: 1px solid #dee2e6;">功能</th>
+                            <th style="padding: 10px; border: 1px solid #dee2e6;">免费版</th>
+                            <th style="padding: 10px; border: 1px solid #dee2e6;">轻度版 ($1.99/月)</th>
+                            <th style="padding: 10px; border: 1px solid #dee2e6;">专业版 ($4.99/月)</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">每月祷告次数</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">3次 + 1次优惠</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">30次</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">无限制</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">祷告历史</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">✓</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">✓</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">✓</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">主题标签</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">✓</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">✓</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">✓</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">分享功能</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">✓</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">✓</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">✓</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">推送提醒</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">基础</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">✓</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">✓</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">优先客服</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">-</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">-</td>
+                            <td style="padding: 10px; border: 1px solid #dee2e6;">✓</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    🔒 我的隐私安全吗？
+                </div>
+                <div class="faq-answer">
+                    <p>我们非常重视您的隐私和数据安全：</p>
+                    <ul>
+                        <li><strong>加密传输：</strong>所有数据通过HTTPS加密传输</li>
+                        <li><strong>安全存储：</strong>数据存储在SOC 2认证的安全数据中心</li>
+                        <li><strong>访问控制：</strong>只有您可以访问自己的祷告内容</li>
+                        <li><strong>不会出售：</strong>我们永远不会出售您的个人信息</li>
+                        <li><strong>可删除：</strong>您可以随时删除账户和所有数据</li>
+                    </ul>
+                    <p>详细信息请查看我们的<a href="privacy.html">隐私政策</a>。</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    📱 支持哪些设备？
+                </div>
+                <div class="faq-answer">
+                    <p>上帝说话支持以下设备：</p>
+                    <ul>
+                        <li><strong>Android：</strong>Android 8.0 (API 26) 及以上版本</li>
+                        <li><strong>iOS：</strong>iOS 13.0 及以上版本</li>
+                        <li><strong>设备要求：</strong>至少2GB RAM，100MB存储空间</li>
+                        <li><strong>网络：</strong>需要稳定的网络连接</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    💳 如何管理我的订阅？
+                </div>
+                <div class="faq-answer">
+                    <p>订阅管理通过您的应用商店账户进行：</p>
+                    <ul>
+                        <li><strong>Android：</strong>Google Play 商店 → 我的应用和游戏 → 订阅</li>
+                        <li><strong>iOS：</strong>设置 → Apple ID → 订阅</li>
+                        <li><strong>取消：</strong>至少在当前周期结束前24小时取消</li>
+                        <li><strong>退款：</strong>按照各应用商店的退款政策执行</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    🌍 支持多种语言吗？
+                </div>
+                <div class="faq-answer">
+                    <p>目前支持的语言：</p>
+                    <ul>
+                        <li><strong>中文（简体）</strong> - 主要语言</li>
+                        <li><strong>英语</strong> - 完整支持</li>
+                        <li><strong>其他语言</strong> - 计划中，敬请期待</li>
+                    </ul>
+                    <p>AI回应会根据您输入的语言自动匹配相应的圣经版本。</p>
+                </div>
+            </div>
+            
+            <h2>故障排除</h2>
+            
+            <h3>应用无法启动</h3>
+            <ol>
+                <li>确保设备满足最低系统要求</li>
+                <li>检查网络连接是否正常</li>
+                <li>重启应用或重启设备</li>
+                <li>更新到最新版本</li>
+                <li>如问题持续，请联系客服</li>
+            </ol>
+            
+            <h3>无法获得祷告回应</h3>
+            <ol>
+                <li>检查网络连接</li>
+                <li>确认是否已达到月度使用限制</li>
+                <li>尝试重新输入祷告内容</li>
+                <li>避免输入过短或过长的内容</li>
+                <li>稍后重试，服务器可能暂时繁忙</li>
+            </ol>
+            
+            <h3>登录问题</h3>
+            <ol>
+                <li>确认邮箱和密码正确</li>
+                <li>检查邮箱是否已验证</li>
+                <li>尝试"忘记密码"重置</li>
+                <li>清除应用缓存</li>
+                <li>联系客服协助恢复账户</li>
+            </ol>
+            
+            <div class="warning">
+                <strong>遇到紧急情况？</strong>如果您正在经历心理危机或有自我伤害想法，请立即联系当地紧急服务或心理健康专线。我们的应用不能替代专业的心理健康服务。
+            </div>
+            
+            <h2>联系我们</h2>
+            <div class="contact-info">
+                <p>如果您在使用过程中遇到问题，请通过以下方式联系我们：</p>
+                <ul>
+                    <li><strong>客服邮箱：</strong> support@godsaid.app</li>
+                    <li><strong>技术支持：</strong> tech@godsaid.app</li>
+                    <li><strong>应用内反馈：</strong> 设置 → 帮助与反馈</li>
+                    <li><strong>紧急问题：</strong> urgent@godsaid.app</li>
+                </ul>
+                <p><strong>客服时间：</strong>周一至周五 9:00-18:00 (UTC+8)</p>
+                <p><strong>响应时间：</strong>一般在24小时内回复，紧急问题会优先处理。</p>
+            </div>
+            
+            <div class="highlight">
+                <strong>用户社区：</strong>加入我们的用户社区，与其他用户分享使用体验，获得更多帮助和鼓励。愿上帝的话语成为您生活中的亮光！
+            </div>
+            
+            <a href="index.html" class="back-link">← 返回首页</a>
+        </div>
+    </div>
+    
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isActive = answer.classList.contains('active');
+            
+            // 关闭所有其他FAQ
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // 切换当前FAQ
+            if (!isActive) {
+                answer.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html> 

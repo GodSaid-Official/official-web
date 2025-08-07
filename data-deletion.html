@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Deletion Request - God Said App</title>
+    <meta name="description" content="Request deletion of your personal data from God Said App. Learn about your data rights and how to delete your account.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #495057;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: #495057;
+            margin: 40px 0 20px 0;
+            font-size: 1.5em;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            color: #6c757d;
+            margin: 30px 0 15px 0;
+            font-size: 1.2em;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #495057;
+        }
+        
+        ul, ol {
+            margin: 15px 0 15px 30px;
+            color: #495057;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        
+        .important {
+            background: #f8d7da;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #dc3545;
+            margin: 20px 0;
+        }
+        
+        .success {
+            background: #d4edda;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+            margin: 20px 0;
+        }
+        
+        .form-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: 1px solid #e9ecef;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #495057;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .submit-btn {
+            background: #dc3545;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #c82333;
+        }
+        
+        .submit-btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        
+        .back-link:hover {
+            background: #0056b3;
+        }
+        
+        .steps {
+            counter-reset: step-counter;
+        }
+        
+        .step {
+            counter-increment: step-counter;
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        
+        .step::before {
+            content: "步骤 " counter(step-counter) ": ";
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header, .content {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .form-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Data Deletion Request</h1>
+            <p style="font-size: 1.1em; color: #6c757d;">Exercise Your Data Rights • Complete Personal Data Deletion</p>
+        </header>
+        
+        <div class="content">
+            <div class="important">
+                <strong>重要提醒：</strong>数据删除是不可逆的操作。一旦删除，您的所有数据将永久消失，包括祷告记录、账户信息和订阅历史。请谨慎考虑。
+            </div>
+            
+            <h2>您的数据权利</h2>
+            
+            <p>根据适用的数据保护法律（包括GDPR、CCPA等），您有权要求删除我们持有的关于您的个人数据。我们承诺在法律规定的时间内处理您的请求。</p>
+            
+            <h3>我们存储的数据类型</h3>
+            <ul>
+                <li><strong>账户信息：</strong>邮箱地址、用户名、注册时间</li>
+                <li><strong>祷告内容：</strong>您输入的所有祷告文本</li>
+                <li><strong>AI回应：</strong>系统为您生成的所有回应内容</li>
+                <li><strong>使用统计：</strong>应用使用频率和功能使用记录</li>
+                <li><strong>设备信息：</strong>设备类型、应用版本、推送令牌</li>
+                <li><strong>购买记录：</strong>订阅状态、购买历史、支付信息</li>
+            </ul>
+            
+            <h2>删除方式</h2>
+            
+            <h3>方式一：应用内删除（推荐）</h3>
+            <div class="steps">
+                <div class="step">打开上帝说话应用</div>
+                <div class="step">进入"设置"页面</div>
+                <div class="step">选择"账户管理"</div>
+                <div class="step">点击"删除账户"</div>
+                <div class="step">确认删除操作</div>
+                <div class="step">账户和数据将在24小时内完全删除</div>
+            </div>
+            
+            <h3>方式二：通过本页面请求</h3>
+            <p>如果您无法访问应用或遇到技术问题，可以通过下面的表单提交删除请求：</p>
+            
+            <div class="form-section">
+                <form id="deletionForm" onsubmit="submitDeletionRequest(event)">
+                    <div class="form-group">
+                        <label for="email">注册邮箱地址 *</label>
+                        <input type="email" id="email" name="email" required 
+                               placeholder="请输入您在应用中使用的邮箱地址">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="userId">用户ID（如果知道）</label>
+                        <input type="text" id="userId" name="userId" 
+                               placeholder="可在应用设置中查看，不必填也可以处理">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reason">删除原因</label>
+                        <select id="reason" name="reason">
+                            <option value="">请选择原因（可选）</option>
+                            <option value="privacy">隐私保护</option>
+                            <option value="not_using">不再使用应用</option>
+                            <option value="data_concern">数据安全担忧</option>
+                            <option value="technical_issue">技术问题</option>
+                            <option value="other">其他原因</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="details">详细说明（可选）</label>
+                        <textarea id="details" name="details" 
+                                  placeholder="如有需要，请提供更多详细信息"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="verification">身份验证</label>
+                        <select id="verification" name="verification" required>
+                            <option value="">请选择验证方式</option>
+                            <option value="email_verification">邮箱验证码</option>
+                            <option value="account_details">提供账户详细信息</option>
+                            <option value="support_ticket">联系客服验证</option>
+                        </select>
+                    </div>
+                    
+                    <h3>确认删除内容</h3>
+                    <p>请选择您要删除的数据类型：</p>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="delete_account" name="delete_types" value="account" checked>
+                        <label for="delete_account">账户信息（邮箱、用户名等）</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="delete_prayers" name="delete_types" value="prayers" checked>
+                        <label for="delete_prayers">所有祷告内容和AI回应</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="delete_usage" name="delete_types" value="usage" checked>
+                        <label for="delete_usage">使用统计和应用数据</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="delete_purchases" name="delete_types" value="purchases">
+                        <label for="delete_purchases">购买记录（注意：这可能影响退款处理）</label>
+                    </div>
+                    
+                    <div class="warning">
+                        <strong>购买记录说明：</strong>根据法律要求，某些财务记录可能需要保留特定期间（通常7年）。如果您选择删除购买记录，我们会删除非必要的信息，但可能保留必要的财务数据以符合法律规定。
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="confirm_understanding" required>
+                        <label for="confirm_understanding">我理解数据删除是不可逆的，一旦删除无法恢复</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="confirm_backup" required>
+                        <label for="confirm_backup">我已备份所需的重要数据（如祷告记录）</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="confirm_subscription" required>
+                        <label for="confirm_subscription">我了解删除账户后需要通过应用商店取消订阅</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">提交删除请求</button>
+                </form>
+            </div>
+            
+            <h2>处理流程</h2>
+            
+            <ol>
+                <li><strong>请求接收：</strong>我们在收到请求后24小时内发送确认邮件</li>
+                <li><strong>身份验证：</strong>为保护您的账户安全，我们需要验证您的身份</li>
+                <li><strong>审核处理：</strong>我们的团队会在5个工作日内审核您的请求</li>
+                <li><strong>数据删除：</strong>通过审核后，我们将在30天内删除您的数据</li>
+                <li><strong>完成确认：</strong>删除完成后，我们会发送最终确认邮件</li>
+            </ol>
+            
+            <h2>删除范围说明</h2>
+            
+            <h3>将被删除的数据</h3>
+            <ul>
+                <li>您的用户账户和登录凭据</li>
+                <li>所有祷告文本和AI生成的回应</li>
+                <li>应用使用统计和偏好设置</li>
+                <li>推送通知令牌和设备信息</li>
+                <li>应用内反馈和客服记录</li>
+            </ul>
+            
+            <h3>可能保留的数据</h3>
+            <ul>
+                <li><strong>法律要求：</strong>某些财务记录（订阅、支付）按法律规定保留</li>
+                <li><strong>安全日志：</strong>匿名化的安全和技术日志（不包含个人信息）</li>
+                <li><strong>聚合统计：</strong>已匿名化的使用统计（无法识别个人身份）</li>
+            </ul>
+            
+            <h2>删除前的考虑</h2>
+            
+            <div class="warning">
+                <h3>替代方案</h3>
+                <p>如果您只是暂时不想使用应用，可以考虑以下替代方案：</p>
+                <ul>
+                    <li><strong>暂停账户：</strong>联系客服暂时禁用账户</li>
+                    <li><strong>数据导出：</strong>下载您的数据副本而不删除账户</li>
+                    <li><strong>隐私设置：</strong>调整隐私设置限制数据收集</li>
+                    <li><strong>取消订阅：</strong>只取消付费订阅但保留免费账户</li>
+                </ul>
+            </div>
+            
+            <h2>联系我们</h2>
+            
+            <p>如果您在数据删除过程中遇到任何问题，请联系我们：</p>
+            
+            <ul>
+                <li><strong>数据保护邮箱：</strong> privacy@godsaid.app</li>
+                <li><strong>客服邮箱：</strong> support@godsaid.app</li>
+                <li><strong>紧急联系：</strong> urgent@godsaid.app</li>
+            </ul>
+            
+            <div class="success">
+                <strong>我们的承诺：</strong>我们尊重您的数据权利，并承诺按照最高标准处理您的删除请求。您的隐私和数据权利对我们来说是神圣不可侵犯的。
+            </div>
+            
+            <a href="index.html" class="back-link">← 返回首页</a>
+        </div>
+    </div>
+    
+    <script>
+        function submitDeletionRequest(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const submitBtn = document.getElementById('submitBtn');
+            
+            // 禁用提交按钮
+            submitBtn.disabled = true;
+            submitBtn.textContent = '正在提交...';
+            
+            // 模拟提交过程
+            setTimeout(() => {
+                alert('删除请求已提交！\n\n我们将在24小时内通过邮箱联系您确认身份并处理您的请求。\n\n请检查您的邮箱（包括垃圾邮件文件夹）获取进一步指示。');
+                
+                // 重置表单
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = '提交删除请求';
+            }, 2000);
+        }
+    </script>
+</body>
+</html> 
