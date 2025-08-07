@@ -158,54 +158,19 @@
             padding: 40px;
             border-radius: 16px;
             margin: 40px 0;
+            text-align: center;
         }
         
-        .form-group {
-            margin-bottom: 25px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #2c3e50;
-        }
-        
-        input, select, textarea {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #e2e8f0;
-            border-radius: 12px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-            font-family: inherit;
-        }
-        
-        input:focus, select:focus, textarea:focus {
-            outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-        
-        .checkbox-group {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+        .google-form-container {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
             margin: 20px 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
         }
         
-        .checkbox-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .checkbox-item input[type="checkbox"] {
-            width: auto;
-            margin: 0;
-        }
-        
-        .submit-btn {
+        .form-link-btn {
+            display: inline-block;
             background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
             color: white;
             padding: 15px 40px;
@@ -213,14 +178,23 @@
             border-radius: 50px;
             font-size: 1.1rem;
             font-weight: 600;
-            cursor: pointer;
+            text-decoration: none;
             transition: all 0.3s ease;
             box-shadow: 0 8px 24px rgba(220, 53, 69, 0.3);
+            margin: 20px 0;
         }
         
-        .submit-btn:hover {
+        .form-link-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 12px 32px rgba(220, 53, 69, 0.4);
+        }
+        
+        .email-option {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            padding: 30px;
+            border-radius: 16px;
+            margin: 30px 0;
+            border-left: 4px solid #667eea;
         }
         
         .steps {
@@ -372,8 +346,8 @@
                 </div>
                 
                 <div class="method-card">
-                    <h3>📧 Method 2: Email Request</h3>
-                    <p>If you cannot access the app or encounter technical issues, submit a deletion request through the form below:</p>
+                    <h3>📧 Method 2: Request Form</h3>
+                    <p>If you cannot access the app or encounter technical issues, submit a deletion request through our form:</p>
                     <ul>
                         <li>Fill out the deletion request form</li>
                         <li>We'll verify your identity</li>
@@ -384,89 +358,38 @@
                 </div>
             </div>
             
-            <h2>Deletion Request Form</h2>
+            <h2>Submit Data Deletion Request</h2>
             
             <div class="form-section">
-                <form id="deletionForm">
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required 
-                               placeholder="Please enter the email address you used in the app">
-                    </div>
+                <h3>📋 Online Request Form</h3>
+                <p>Click the button below to open our secure deletion request form. Your request will be automatically sent to our team for processing.</p>
+                
+                <div class="google-form-container">
+                    <p><strong>What happens when you submit:</strong></p>
+                    <ul style="text-align: left; margin: 20px 0;">
+                        <li>✅ Automatic email notification sent to our team</li>
+                        <li>✅ Your request is logged in our secure system</li>
+                        <li>✅ You'll receive a confirmation email within 24 hours</li>
+                        <li>✅ We'll contact you to verify your identity</li>
+                        <li>✅ Data deletion completed within 30 days</li>
+                    </ul>
                     
-                    <div class="form-group">
-                        <label for="username">Username (Optional)</label>
-                        <input type="text" id="username" name="username" 
-                               placeholder="Your username in the app (if you remember)">
-                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfAKyJMDJa8TokpqHfDflmV8sGPDw4Sbf3E1r59eQHteAEXow/viewform?usp=header" target="_blank" class="form-link-btn">
+                        🗑️ Submit Deletion Request
+                    </a>
                     
-                    <div class="form-group">
-                        <label for="reason">Reason for Deletion</label>
-                        <select id="reason" name="reason" required>
-                            <option value="">Select reason</option>
-                            <option value="no_longer_needed">No longer need the service</option>
-                            <option value="privacy_concerns">Privacy concerns</option>
-                            <option value="technical_issues">Technical issues</option>
-                            <option value="duplicate_account">Duplicate account</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="additional_info">Additional Information (Optional)</label>
-                        <textarea id="additional_info" name="additional_info" 
-                                  placeholder="Any additional information that might help us process your request"></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label>Select data types to delete:</label>
-                        <div class="checkbox-group">
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="delete_account" name="delete_types" value="account" checked>
-                                <label for="delete_account">Account information and login credentials</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="delete_prayers" name="delete_types" value="prayers" checked>
-                                <label for="delete_prayers">All prayer content and AI responses</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="delete_settings" name="delete_types" value="settings" checked>
-                                <label for="delete_settings">App settings and preferences</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="delete_usage" name="delete_types" value="usage" checked>
-                                <label for="delete_usage">Usage statistics and analytics data</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="delete_purchases" name="delete_types" value="purchases">
-                                <label for="delete_purchases">Purchase records (see note below)</label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="warning">
-                        <strong>Purchase Records Note:</strong> Due to legal requirements, certain financial records may need to be retained for a specific period (typically 7 years). If you select to delete purchase records, we will delete non-essential information but may retain necessary financial data to comply with legal requirements.
-                    </div>
-                    
-                    <div class="form-group">
-                        <div class="checkbox-group">
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="confirm_understanding" required>
-                                <label for="confirm_understanding">I understand that this action is irreversible and all selected data will be permanently deleted</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="confirm_backup" required>
-                                <label for="confirm_backup">I have backed up any important data I need (such as prayer records)</label>
-                            </div>
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="confirm_identity" required>
-                                <label for="confirm_identity">I confirm this is my account and I have the right to request its deletion</label>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Submit Deletion Request</button>
-                </form>
+                    <p style="margin-top: 20px; font-size: 0.9rem; color: #6c757d;">
+                        Form opens in a new window • Secure Google Forms • No login required
+                    </p>
+                </div>
+                
+                <div class="email-option">
+                    <h4>📧 Alternative: Email Request</h4>
+                    <p>You can also send your deletion request directly via email:</p>
+                    <p><strong>Email:</strong> <a href="mailto:yingapple0819@gmail.com?subject=Data Deletion Request - God Said App&body=Please include:%0D%0A- Your registered email address%0D%0A- Reason for deletion%0D%0A- Confirmation that you understand this is irreversible">yingapple0819@gmail.com</a></p>
+                    <p><strong>Subject:</strong> Data Deletion Request - God Said App</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">Please include your registered email address and confirmation that you understand the deletion is irreversible.</p>
+                </div>
             </div>
             
             <h2>Processing Workflow</h2>
@@ -519,9 +442,9 @@
             
             <p>If you encounter any issues during the data deletion process, please contact us:</p>
             <ul>
-                <li><strong>Privacy Email:</strong> privacy@godsaid.app</li>
-                <li><strong>Customer Service:</strong> support@godsaid.app</li>
+                <li><strong>Primary Contact:</strong> yingapple0819@gmail.com</li>
                 <li><strong>Response Time:</strong> Within 48 hours</li>
+                <li><strong>Phone Support:</strong> Available upon request</li>
             </ul>
             
             <div class="highlight-box">
@@ -531,12 +454,5 @@
             <a href="index.html" class="back-link">Back to Home</a>
         </div>
     </div>
-    
-    <script>
-        document.getElementById('deletionForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Deletion request submitted!\n\nWe will contact you via email within 24 hours to confirm your identity and process your request.\n\nPlease check your email (including spam folder) for further instructions.');
-        });
-    </script>
 </body>
 </html> 
