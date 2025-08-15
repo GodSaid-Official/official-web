@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - God Said App | Prayer Guides & Biblical Wisdom</title>
+    <meta name="description" content="Discover practical prayer guides, biblical wisdom for anxiety, and spiritual growth resources. Learn how to deepen your prayer life with scripture-based guidance.">
+    <meta name="keywords" content="christian blog, prayer guides, bible verses for anxiety, daily devotion, spiritual growth, prayer tips, biblical wisdom">
+    
+    <!-- Open Graph tags for social sharing -->
+    <meta property="og:title" content="God Said Blog - Prayer & Scripture Resources">
+    <meta property="og:description" content="Practical guides for prayer, biblical wisdom for life's challenges, and spiritual growth resources.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://raisemeup.space/blog.html">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "God Said Blog",
+        "description": "Christian prayer guides and biblical wisdom",
+        "url": "http://raisemeup.space/blog.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "God Said App"
+        }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .nav-bar {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #764ba2;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+        
+        .blog-content {
+            padding: 25px;
+        }
+        
+        .blog-category {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+        
+        .blog-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            line-height: 1.3;
+        }
+        
+        .blog-excerpt {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        .read-time {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .featured-post {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        
+        .featured-image {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: white;
+        }
+        
+        .featured-content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .featured-badge {
+            display: inline-block;
+            background: #fbbf24;
+            color: #78350f;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            width: fit-content;
+        }
+        
+        @media (max-width: 768px) {
+            .featured-post {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-image {
+                height: 200px;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>📚 God Said Blog</h1>
+            <p class="header-subtitle">Prayer Guides, Biblical Wisdom & Spiritual Growth</p>
+        </div>
+    </div>
+    
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="nav-links">
+                <a href="index.html">← Back to Home</a>
+                <a href="#anxiety">Anxiety & Peace</a>
+                <a href="#prayer-guides">Prayer Guides</a>
+                <a href="#testimonies">Testimonies</a>
+                <a href="#devotions">Daily Devotions</a>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <!-- Featured Post -->
+        <a href="blog/5-bible-verses-anxiety.html" class="featured-post">
+            <div class="featured-image">
+                🙏
+            </div>
+            <div class="featured-content">
+                <span class="featured-badge">⭐ FEATURED</span>
+                <h2 class="blog-title">5 Bible Verses That Actually Help When You're Anxious (And How I Use Them)</h2>
+                <p class="blog-excerpt">Let me be honest - I've struggled with anxiety for years. These aren't just random verses I googled. These are the scriptures that have literally calmed my racing heart at 3 AM, helped me through panic attacks, and given me peace when everything felt out of control...</p>
+                <div class="blog-meta">
+                    <span>January 2025</span>
+                    <span class="read-time">📖 5 min read</span>
+                </div>
+            </div>
+        </a>
+        
+        <!-- Blog Grid -->
+        <div class="blog-grid">
+            <a href="blog/morning-prayer-routine.html" class="blog-card">
+                <div class="blog-image">☀️</div>
+                <div class="blog-content">
+                    <span class="blog-category">Prayer Guides</span>
+                    <h3 class="blog-title">How I Built a 5-Minute Morning Prayer Routine That Actually Stuck</h3>
+                    <p class="blog-excerpt">After failing at prayer routines for years, I finally found something that works. Here's my simple approach...</p>
+                    <div class="blog-meta">
+                        <span>Coming Soon</span>
+                        <span class="read-time">📖 4 min</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="blog/praying-for-work-stress.html" class="blog-card">
+                <div class="blog-image">💼</div>
+                <div class="blog-content">
+                    <span class="blog-category">Work & Faith</span>
+                    <h3 class="blog-title">Praying Through Work Stress: A Practical Guide for Busy Professionals</h3>
+                    <p class="blog-excerpt">Between meetings, deadlines, and difficult coworkers, here's how I find moments to connect with God...</p>
+                    <div class="blog-meta">
+                        <span>Coming Soon</span>
+                        <span class="read-time">📖 6 min</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="blog/forgiveness-journey.html" class="blog-card">
+                <div class="blog-image">💝</div>
+                <div class="blog-content">
+                    <span class="blog-category">Relationships</span>
+                    <h3 class="blog-title">The Prayer That Helped Me Finally Forgive</h3>
+                    <p class="blog-excerpt">Forgiveness isn't a feeling - it's a choice. Here's the prayer process that helped me let go of deep hurt...</p>
+                    <div class="blog-meta">
+                        <span>Coming Soon</span>
+                        <span class="read-time">📖 7 min</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="blog/scripture-for-depression.html" class="blog-card">
+                <div class="blog-image">🌧️</div>
+                <div class="blog-content">
+                    <span class="blog-category">Mental Health</span>
+                    <h3 class="blog-title">When You're Too Depressed to Pray: Scripture That Meets You Where You Are</h3>
+                    <p class="blog-excerpt">Some days, even prayer feels impossible. These verses have been my lifeline during the darkest moments...</p>
+                    <div class="blog-meta">
+                        <span>Coming Soon</span>
+                        <span class="read-time">📖 5 min</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="blog/family-prayer-time.html" class="blog-card">
+                <div class="blog-image">👨‍👩‍👧‍👦</div>
+                <div class="blog-content">
+                    <span class="blog-category">Family Faith</span>
+                    <h3 class="blog-title">Making Prayer Fun for Kids: What Actually Worked for Our Family</h3>
+                    <p class="blog-excerpt">After years of forced, awkward family devotions, we found ways to make prayer time something our kids actually enjoy...</p>
+                    <div class="blog-meta">
+                        <span>Coming Soon</span>
+                        <span class="read-time">📖 5 min</span>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="blog/prayer-journal-tips.html" class="blog-card">
+                <div class="blog-image">📔</div>
+                <div class="blog-content">
+                    <span class="blog-category">Spiritual Growth</span>
+                    <h3 class="blog-title">My Prayer Journal Method: Tracking God's Faithfulness Over Time</h3>
+                    <p class="blog-excerpt">How keeping a simple prayer journal transformed my faith and helped me see God's answers clearly...</p>
+                    <div class="blog-meta">
+                        <span>Coming Soon</span>
+                        <span class="read-time">📖 4 min</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <footer style="background: #1e293b; color: white; padding: 40px 0; margin-top: 60px;">
+        <div class="container" style="text-align: center;">
+            <p style="margin-bottom: 20px;">Join thousands finding peace through prayer</p>
+            <a href="https://play.google.com/store/apps/details?id=com.godsaid" style="display: inline-block; background: #667eea; color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600;">Download God Said App</a>
+            <p style="margin-top: 30px; opacity: 0.7;">&copy; 2025 God Said App. Helping you connect with God's word daily.</p>
+        </div>
+    </footer>
+</body>
+</html> 
