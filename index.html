@@ -273,6 +273,94 @@
             }
         }
     </style>
+    
+    <!-- Email Confirmation Success Handler -->
+    <script>
+    // Check if user was redirected after email confirmation
+    window.addEventListener('DOMContentLoaded', function() {
+        // Supabase returns auth data in URL hash after email confirmation
+        const hashParams = new URLSearchParams(window.location.hash.substring(1));
+        const accessToken = hashParams.get('access_token');
+        const type = hashParams.get('type');
+        
+        // Show success message if this is a signup confirmation
+        if (type === 'signup' && accessToken) {
+            // Create success notification
+            const notification = document.createElement('div');
+            notification.innerHTML = `
+                <div id="confirmation-success" style="
+                    position: fixed;
+                    top: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+                    color: white;
+                    padding: 25px 40px;
+                    border-radius: 16px;
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+                    z-index: 10000;
+                    font-family: Georgia, serif;
+                    text-align: center;
+                    max-width: 500px;
+                    animation: slideDown 0.5s ease-out;
+                ">
+                    <div style="font-size: 48px; margin-bottom: 15px;">✅</div>
+                    <h3 style="margin: 0 0 10px 0; font-size: 28px; font-weight: 700;">Email Confirmed!</h3>
+                    <p style="margin: 0 0 20px 0; font-size: 18px; line-height: 1.5;">
+                        Blessed be your journey! Your account is now active. 
+                        You can sign in to the God Said app and start receiving divine guidance.
+                    </p>
+                    <div style="margin: 20px 0; padding: 15px; background: rgba(255,255,255,0.2); border-radius: 8px;">
+                        <p style="margin: 0; font-style: italic; font-size: 16px;">
+                            "Ask, and it shall be given you; seek, and ye shall find"
+                        </p>
+                        <p style="margin: 5px 0 0 0; font-size: 14px;">- Matthew 7:7</p>
+                    </div>
+                    <button onclick="document.getElementById('confirmation-success').parentElement.remove()" style="
+                        background: white;
+                        color: #16a34a;
+                        border: none;
+                        padding: 12px 30px;
+                        border-radius: 8px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        font-weight: bold;
+                        transition: all 0.3s;
+                    " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        Got it, thank you! 🙏
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(notification);
+            
+            // Auto-hide after 15 seconds
+            setTimeout(() => {
+                const elem = document.getElementById('confirmation-success');
+                if (elem && elem.parentElement) {
+                    elem.parentElement.remove();
+                }
+            }, 15000);
+            
+            // Clean up URL to remove auth tokens
+            if (window.history.replaceState) {
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        }
+    });
+    </script>
+    
+    <style>
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+    }
+    </style>
 </head>
 <body>
     <div class="container">
